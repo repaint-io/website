@@ -1,0 +1,8 @@
+= Website code for repaint-io
+
+This is using Yeoman.
+
+git clone it
+bower install
+npm install
+grunt serve

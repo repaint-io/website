@@ -1,0 +1,12 @@
+= Composition with Maven
+
+Traditionally composition has been difficult or ignored within Maven.
+
+[source,xml]
+----
+<tiles>
+	<tile>io.repaint:git-release-tile:[1.0,2.0)</tile>
+</tiles>
+----
+
+.
