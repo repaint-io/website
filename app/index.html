@@ -2,13 +2,14 @@
 <html class="no-js">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Repaint.io - A Fresh Look at Maven</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
 	  <link rel="stylesheet" hre="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.1/styles/default.min.css"/>
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/highlightjs/styles/default.css" />
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
@@ -25,14 +26,20 @@
     <!-- Add your site or application content here -->
     <div class="container">
       <div class="header">
-        <ul class="nav nav-pills pull-right">
-          <li class="active"><a ng-href="#">Home</a></li>
-          <li><a ng-href="#/homedoc">About</a></li>
-          <li><a ng-href="#/composition">Composition</a></li>
-          <li><a ng-href="#/contact">Contact</a></li>
+        <ul class="nav nav-pills pull-right" ng-controller="NavController">
+          <li ng-class="{active: active('main')}"><a ng-href="#/main">Home</a></li>
+          <li ng-class="{active: active('dochome')}"><a ng-href="#/dochome">Docs</a></li>
+          <li ng-class="{active: active('contact')}"><a ng-href="#/contact">Contact</a></li>
         </ul>
         <h3 class="text-muted">repaint.io</h3>
       </div>
+
+	    <div class="repaint-main container-fluid">
+		    <div class="row">
+			    <div class="col-md-3"><img src="images/small_logo.png" alt="Repaint Logo"></div>
+			    <div class="col-md-9"><h1>Repaint IO</h1><p class="lead">A Fresh Look at Building Applications with Maven.</p></div>
+		    </div>
+	    </div>
 
       <div ng-view></div>
 
@@ -90,9 +97,14 @@
     <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.1/highlight.min.js"></script>
     <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
 
+
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <script src="scripts/app.js"></script>
+        <script src="scripts/services/gplus_service.js"></script>
+        <script src="scripts/services/highlight_service.js"></script>
         <script src="scripts/controllers/main.js"></script>
+        <script src="scripts/controllers/nav_controller.js"></script>
+        <script src="scripts/controllers/dochome_controller.js"></script>
 
     <!-- endbuild -->
 

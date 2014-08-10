@@ -1,9 +1,7 @@
-= image::images/small_logo.png[Repaint - A Fresh Look at Maven]
 
-== Introduction
+= Introduction
 
 There comes a time when a community often has to look back at the past and decide whether
 what it is doing actually amounts to best practice. Often people who haven't worked in the community
 have come up with some good ideas, link:composition.html[and] blah.
 
-image::images/small_logo.png[blah]
