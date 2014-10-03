@@ -1,0 +1,7 @@
+= The plugins
+
+The plugins that make up the bulk of the functionality for the Repaint philosophy are:
+
+* the Maven Tiles plugin - this provides functional composition
+* the Bounds plugin - this keeps Maven performing and your version ranges up to date as you release your artifacts.
+

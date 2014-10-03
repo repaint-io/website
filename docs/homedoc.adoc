@@ -1,7 +1,64 @@
+= Repaint.IO
+Building projects better with Maven
 
-= Introduction
+== Introduction
 
 There comes a time when a community often has to look back at the past and decide whether
-what it is doing actually amounts to best practice. Often people who haven't worked in the community
-have come up with some good ideas, link:composition.html[and] blah.
+what it is doing actually amounts to best practice. repaint is the coming together of a variety
+of work done by people in the Maven community who believe that the "standard" way to doing build
+using Maven is the wrong way, and that better guidelines are needed for modern, sustainable builds.
+
+== What we believe in
+
+These are the tenants of the Repaint philosophy, and we will go into each more detail, but they are here
+up front so you know what you are getting into.
+
+* _small artifacts_, as many as you need, each one specific and fulfilling a single need.
+* _release early, release often_ - write the test, fix the bug, get your code reviewed, release the artifact. rinse. repeat.
+* _use version ranges_, and *get over* not using 1.0. Sure, Maven version ranges don't work with 1.0, but they work
+fine if you start at 1.1.
+* _use dependency composition_, don't use dependency management. Its cleaner, more easily upgradable and you only bring
+in the artifacts that your build needs.
+* _use functional composition_, don't use parents, and don't use plugin management. This works via tiles, tiles only bring in what you need,
+and give you much finer grained control over your functional build without loosing ease of use.
+
+=== What we are against
+
+* _don't use multi-module builds_. Multi-module builds conflate a whole lot of different build responsibilities badly.
+Use a reactor (a pom with modules), but not multi-module builds.
+* _don't ever put repository settings in your POMs_. They are not sustainable.
+
+== Helpful links
+
+Speakers and link:speaking.adoc[help]? What link:plugins.adoc[plugins] do we use?
+
+== Lets dig in
+
+Its time to get into the details, at the heart they are pretty straight forward.
+
+=== Small artifacts
+
+=== Release early, release often
+
+=== Use version ranges
+
+=== Use dependency composition
+
+=== Use functional composition
+
+
+== What not to do and why
+
+=== Don't use plugin management
+
+=== Don't use dependency management
+
+=== Don't use Multi-module builds
+
+=== Don't ever put repository settings in your POM
+
+
+
+
+
 
